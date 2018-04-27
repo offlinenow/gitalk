@@ -191,7 +191,8 @@ class GitalkComponent extends Component {
         client_id: clientID,
         client_secret: clientSecret,
         labels: labels.concat(id).join(','),
-        t: Date.now()
+        t: Date.now(),
+        state: 'all'
       }
     }).then(res => {
       const { admin, createIssueManually } = this.options
